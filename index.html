@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Synapse Neurobar Barcelona — Cócteles Emocionales</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Neurocoquetelaria en Barcelona. Cócteles de autor que activan emociones — calma, foco, euforia. Experiencias sensoriales únicas en el corazón de Barcelona." />
+  <meta name="keywords" content="neurocoquetelaria barcelona, cócteles emocionales, experiencias sensoriales, mixología científica, cocktail bar barcelona, neurociencia y sabor, eventos privados barcelona, build your cocktail barcelona" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Synapse Neurobar" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Synapse Neurobar — Donde la Neurociencia Encuentra la Mixología" />
+  <meta property="og:description" content="Cócteles de autor que activan emociones concretas. Calma, foco, euforia, sorpresa. Vive la experiencia sensorial en Barcelona." />
+  <meta property="og:locale" content="es_ES" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════════════════ -->
+  <nav id="nav" class="nav" role="navigation" aria-label="Navegación principal">
+    <div class="nav__inner">
+
+      <a href="#hero" class="nav__logo" aria-label="Synapse Neurobar — Inicio">
+        <!-- Synapse logo mark (blob shape) -->
+        <svg class="nav__logo-icon" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <path d="M16 4C10 4 5 8.5 5 14c0 3 1.5 5.5 3.8 7.2C10.5 22.8 12 25 12 27.5h8c0-2.5 1.5-4.7 3.2-6.3C25.5 19.5 27 17 27 14c0-5.5-5-10-11-10z" fill="#F1C678" opacity="0.9"/>
+          <circle cx="11" cy="12" r="2.5" fill="#3792A5" opacity="0.7"/>
+          <circle cx="21" cy="10" r="1.8" fill="#3792A5" opacity="0.6"/>
+          <circle cx="18" cy="19" r="2" fill="#F1C678" opacity="0.5"/>
+        </svg>
+        SYNAPSE
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav__links" id="navLinks" role="list">
+        <li><a href="#neurologia">Neurología</a></li>
+        <li><a href="#experiencias">Experiencias</a></li>
+        <li><a href="#carta">Carta</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="hero" class="hero" aria-label="Sección principal">
+
+    <!-- Background: video (drops in when client delivers asset) + CSS blob fallback -->
+    <div class="hero__bg">
+      <video
+        class="hero__video"
+        id="heroVideo"
+        muted
+        playsinline
+        preload="none"
+        aria-hidden="true"
+      >
+        <!-- Replace src with client-provided boomerang video: assets/video/hero.mp4 -->
+        <source src="assets/video/hero.mp4" type="video/mp4" />
+      </video>
+
+      <!-- CSS blob — visible when video is absent or loading -->
+      <div class="hero__blob" id="heroBlob" aria-hidden="true">
+        <div class="blob-wrap">
+          <div class="blob-shape"></div>
+          <div class="blob-core"></div>
+          <div class="blob-particles">
+            <span class="blob-particle"></span>
+            <span class="blob-particle"></span>
+            <span class="blob-particle"></span>
+            <span class="blob-particle"></span>
+            <span class="blob-particle"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gradient overlay -->
+    <div class="hero__overlay" aria-hidden="true"></div>
+
+    <!-- Floating molecule element -->
+    <div class="hero__molecule" id="heroMolecule" aria-hidden="true">
+      <div class="molecule">
+        <div class="molecule__atom molecule__atom--center"></div>
+        <div class="molecule__atom molecule__atom--a"></div>
+        <div class="molecule__atom molecule__atom--b"></div>
+        <div class="molecule__atom molecule__atom--c"></div>
+        <div class="molecule__atom molecule__atom--d"></div>
+        <div class="molecule__bond molecule__bond--1"></div>
+        <div class="molecule__bond molecule__bond--2"></div>
+        <div class="molecule__bond molecule__bond--3"></div>
+        <div class="molecule__bond molecule__bond--4"></div>
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div class="hero__content">
+      <span class="hero__eyebrow">Cocktail Bar · Barcelona</span>
+
+      <h1 class="hero__title">
+        <span class="hero__title-line">CADA EMOCIÓN</span>
+        <span class="hero__title-line">TIENE UN SABOR</span>
+      </h1>
+
+      <p class="hero__subtitle">SIENTE. ELIGE. VIVE.</p>
+
+      <div class="hero__cta-group">
+        <a
+          href="https://wa.me/34605414776?text=Hola%2C%20quiero%20reservar%20una%20mesa%20en%20Synapse%20Neurobar"
+          class="btn btn--primary"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Reservar mesa por WhatsApp"
+        >
+          <!-- WhatsApp icon -->
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          RESERVE AHORA
+        </a>
+
+        <a href="#carta" class="link-secondary">EXPLORE NUESTRA CARTA</a>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <div class="hero__scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       NEUROLOGÍA
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="neurologia" class="neurologia" aria-labelledby="neurologia-title">
+    <div class="container">
+      <div class="neurologia__inner reveal">
+        <span class="section-label">01 — Filosofía</span>
+
+        <h2 id="neurologia-title" class="section-title">
+          DONDE LA NEUROCIENCIA<br>ENCUENTRA LA MIXOLOGÍA
+        </h2>
+
+        <p class="neurologia__body">
+          En Synapse creemos que la coctelería es un lenguaje sensorial.
+          Diseñamos bebidas que activan emociones concretas — chispa, calma, foco, euforia —
+          con intención, ciencia y elegancia. Cada sorbo es una conversación entre la
+          neurociencia y la mixología científica; cada cóctel personalizado, una experiencia sensorial
+          única en el corazón de Barcelona.
+        </p>
+
+        <span class="neurologia__line" aria-hidden="true"></span>
+      </div>
+    </div>
+
+    <!-- Decorative large number -->
+    <div class="neurologia__accent" aria-hidden="true">01</div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       EXPERIENCIAS
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="experiencias" class="experiencias" aria-labelledby="experiencias-title">
+    <div class="container">
+
+      <header class="experiencias__header reveal">
+        <span class="section-label">02 — Experiencias</span>
+        <h2 id="experiencias-title" class="section-title">
+          MÁS QUE UN CÓCTEL,<br>UNA CONEXIÓN
+        </h2>
+      </header>
+
+      <div class="experiencias__grid">
+
+        <!-- Card 1: Crea Tu Cocktail -->
+        <article class="exp-card reveal" data-delay="0" aria-label="Crea tu cocktail">
+          <div class="exp-card__icon" aria-hidden="true">
+            <!-- Cocktail shaker — line art SVG -->
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <!-- Shaker body -->
+              <path d="M15 18 L12 44 L36 44 L33 18 Z" pathLength="1"/>
+              <!-- Shaker cap -->
+              <path d="M13 18 L35 18 L32 10 L16 10 Z" pathLength="1"/>
+              <!-- Cap top knob -->
+              <path d="M20 10 L28 10 L26 6 L22 6 Z" pathLength="1"/>
+              <!-- Motion lines -->
+              <line x1="39" y1="22" x2="44" y2="20" pathLength="1"/>
+              <line x1="40" y1="28" x2="45" y2="28" pathLength="1"/>
+              <line x1="39" y1="34" x2="44" y2="36" pathLength="1"/>
+              <!-- Ice cubes suggestion -->
+              <path d="M20 28 L24 26 L28 28 L28 33 L24 35 L20 33 Z" pathLength="1"/>
+            </svg>
+          </div>
+
+          <h3 class="exp-card__title">Crea Tu Cocktail</h3>
+          <p class="exp-card__desc">
+            Elige cada ingrediente. Diseña tu propia historia sensorial guiado por
+            nuestros neuromixólogos. Tu emoción, tu receta.
+          </p>
+        </article>
+
+        <!-- Card 2: Eventos Privados -->
+        <article class="exp-card reveal" data-delay="120" aria-label="Eventos privados">
+          <div class="exp-card__icon" aria-hidden="true">
+            <!-- People celebration — line art SVG -->
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <!-- Three people heads -->
+              <circle cx="12" cy="14" r="5" pathLength="1"/>
+              <circle cx="24" cy="12" r="5.5" pathLength="1"/>
+              <circle cx="36" cy="14" r="5" pathLength="1"/>
+              <!-- Body curves -->
+              <path d="M4 38 C4 30 10 26 12 26 C14 26 16 27 18 28" pathLength="1"/>
+              <path d="M44 38 C44 30 38 26 36 26 C34 26 32 27 30 28" pathLength="1"/>
+              <path d="M16 40 C16 31 20 26 24 26 C28 26 32 31 32 40" pathLength="1"/>
+              <!-- Celebration sparkles -->
+              <path d="M24 4 L24 2 M21 5 L20 3 M27 5 L28 3" pathLength="1"/>
+              <!-- Stars / confetti -->
+              <path d="M8 8 L9 6 L10 8 L8 7 L10 7 Z" pathLength="1"/>
+              <path d="M38 6 L39 4 L40 6 L38 5 L40 5 Z" pathLength="1"/>
+            </svg>
+          </div>
+
+          <h3 class="exp-card__title">Eventos Privados</h3>
+          <p class="exp-card__desc">
+            Experiencias personalizadas para grupos privados en Barcelona.
+            Conecta, siente, celebra. La ciencia de las emociones al servicio de tu evento.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       CARTA EMOCIONAL — COVERFLOW CAROUSEL
+  ═══════════════════════════════════════════════════════════ -->
+  <section id="carta" class="carta" aria-labelledby="carta-title">
+
+    <header class="carta__header reveal">
+      <span class="section-label">03 — Carta</span>
+      <h2 id="carta-title" class="section-title">
+        NO ES UNA CARTA,<br>ES UN MAPA EMOCIONAL
+      </h2>
+      <p class="carta__subtitle">Cócteles de Autor</p>
+    </header>
+
+    <!-- Coverflow -->
+    <div class="coverflow" id="coverflow" role="region" aria-label="Carta de cócteles">
+      <div class="coverflow__track" id="coverflowTrack" aria-live="polite">
+
+        <!-- 1. SYNAPSE CÍTRICA | CALMA -->
+        <article class="cf-card" data-emotion="CALMA" aria-label="Synapse Cítrica — Calma">
+          <div class="cf-card__art">
+            <div class="cf-card__art-bg"></div>
+            <div class="cf-card__art-glow"></div>
+            <div class="cf-card__art-icon">
+              <svg viewBox="0 0 80 100" aria-hidden="true">
+                <!-- Coupe glass -->
+                <path d="M15 20 Q40 60 65 20" stroke-width="1.5"/>
+                <line x1="40" y1="60" x2="40" y2="85"/>
+                <line x1="28" y1="85" x2="52" y2="85"/>
+                <!-- Bubbles -->
+                <circle cx="30" cy="35" r="2"/>
+                <circle cx="45" cy="28" r="1.5"/>
+                <circle cx="55" cy="38" r="1"/>
+                <!-- Garnish -->
+                <path d="M55 18 Q60 10 65 15 Q58 18 55 18"/>
+              </svg>
+            </div>
+            <!-- Client photo slot -->
+            <img class="cf-card__photo" src="" alt="Synapse Cítrica cocktail" loading="lazy" />
+          </div>
+          <div class="cf-card__body">
+            <span class="cf-card__emotion">CALMA</span>
+            <h3 class="cf-card__name">SYNAPSE CÍTRICA</h3>
+            <p class="cf-card__sensorial">Lavanda, vainilla y limón — fresco y floral para desconectar.</p>
+          </div>
+        </article>
+
+        <!-- 2. LEMON PIE | CALMA -->
+        <article class="cf-card" data-emotion="CALMA" aria-label="Lemon Pie — Calma">
+          <div class="cf-card__art">
+            <div class="cf-card__art-bg"></div>
+            <div class="cf-card__art-glow"></div>
+            <div class="cf-card__art-icon">
+              <svg viewBox="0 0 80 100" aria-hidden="true">
+                <!-- Nick & nora glass -->
+                <path d="M20 25 Q40 70 60 25" stroke-width="1.5"/>
+                <line x1="40" y1="65" x2="40" y2="85"/>
+                <ellipse cx="40" cy="85" rx="14" ry="3"/>
+                <!-- Foam top -->
+                <path d="M22 24 Q30 16 40 18 Q50 16 58 24" stroke-width="1.5"/>
+                <!-- Meringue swirl -->
+                <path d="M35 15 Q40 8 45 15 Q42 20 38 18" stroke-width="1.2"/>
+              </svg>
+            </div>
+            <img class="cf-card__photo" src="" alt="Lemon Pie cocktail" loading="lazy" />
+          </div>
+          <div class="cf-card__body">
+            <span class="cf-card__emotion">CALMA</span>
+            <h3 class="cf-card__name">LEMON PIE</h3>
+            <p class="cf-card__sensorial">Ron con galleta y leche condensada — dulce y envolvente como un abrazo.</p>
+          </div>
+        </article>
+
+        <!-- 3. TROPICAL 'RAT' | EUFORIA -->
+        <article class="cf-card" data-emotion="EUFORIA" aria-label="Tropical Rat — Euforia">
+          <div class="cf-card__art">
+            <div class="cf-card__art-bg"></div>
+            <div class="cf-card__art-glow"></div>
+            <div class="cf-card__art-icon">
+              <svg viewBox="0 0 80 100" aria-hidden="true">
+                <!-- Highball -->
+                <path d="M25 20 L22 82 L58 82 L55 20 Z" stroke-width="1.5"/>
+                <!-- Ice -->
+                <path d="M30 45 L38 41 L46 45 L46 55 L38 59 L30 55 Z" stroke-width="1.2"/>
+                <!-- Foam cloud -->
+                <path d="M25 22 Q30 14 37 18 Q40 12 45 16 Q52 13 57 20" stroke-width="1.5"/>
+                <!-- Garnish pineapple -->
+                <path d="M52 16 L56 8 L60 16 M58 10 L54 12" stroke-width="1.2"/>
+              </svg>
+            </div>
+            <img class="cf-card__photo" src="" alt="Tropical Rat cocktail" loading="lazy" />
+          </div>
+          <div class="cf-card__body">
+            <span class="cf-card__emotion">EUFORIA</span>
+            <h3 class="cf-card__name">TROPICAL 'RAT'</h3>
+            <p class="cf-card__sensorial">Ratafia, ron y piña asada con espuma de coco — tropical, sin frenos.</p>
+          </div>
+        </article>
+
+        <!-- 4. BREEZE-HEAT | EUFORIA -->
+        <article class="cf-card" data-emotion="EUFORIA" aria-label="Breeze-Heat — Euforia">
+          <div class="cf-card__art">
+            <div class="cf-card__art-bg"></div>
+            <div class="cf-card__art-glow"></div>
+            <div class="cf-card__art-icon">
+              <svg viewBox="0 0 80 100" aria-hidden="true">
+                <!-- Old fashioned rocks glass -->
+                <path d="M18 40 L20 80 L60 80 L62 40 Z" stroke-width="1.5"/>
+                <!-- Big ice cube -->
+                <path d="M26 52 L40 44 L54 52 L54 68 L40 76 L26 68 Z" stroke-width="1.2"/>
+                <!-- Smoke wisps -->
+                <path d="M35 38 Q30 30 35 22 Q40 14 35 8" stroke-width="1.2"/>
+                <path d="M45 36 Q52 28 47 20 Q42 12 47 6" stroke-width="1"/>
+                <!-- Orange peel garnish -->
+                <path d="M54 38 Q62 32 65 38 Q62 44 54 38" stroke-width="1.2"/>
+              </svg>
+            </div>
+            <img class="cf-card__photo" src="" alt="Breeze-Heat cocktail" loading="lazy" />
+          </div>
+          <div class="cf-card__body">
+            <span class="cf-card__emotion">EUFORIA</span>
+            <h3 class="cf-card__name">BREEZE-HEAT</h3>
+            <p class="cf-card__sensorial">Mezcal, tepache de higos y chile — ahumado con un golpe de calor.</p>
+          </div>
+        </article>
+
+        <!-- 5. SUMMER PARADISE | FOCO -->
+        <article class="cf-card" data-emotion="FOCO" aria-label="Summer Paradise — Foco">
+          <div class="cf-card__art">
+            <div class="cf-card__art-bg"></div>
+            <div class="cf-card__art-glow"></div>
+            <div class="cf-card__art-icon">
+              <svg viewBox="0 0 80 100" aria-hidden="true">
+                <!-- Martini / coupe -->
+                <path d="M10 20 L40 72 L70 20 Z" stroke-width="1.5"/>
+                <line x1="40" y1="72" x2="40" y2="88"/>
+                <line x1="30" y1="88" x2="50" y2="88"/>
+                <!-- Garnish: citrus slice -->
+                <circle cx="65" cy="18" r="8" stroke-width="1.2"/>
+                <line x1="65" y1="10" x2="65" y2="26" stroke-width="0.8"/>
+                <line x1="57" y1="18" x2="73" y2="18" stroke-width="0.8"/>
+                <path d="M59 12 L71 24 M59 24 L71 12" stroke-width="0.8"/>
+              </svg>
+            </div>
+            <img class="cf-card__photo" src="" alt="Summer Paradise cocktail" loading="lazy" />
+          </div>
+          <div class="cf-card__body">
+            <span class="cf-card__emotion">FOCO</span>
+            <h3 class="cf-card__name">SUMMER PARADISE</h3>
+            <p class="cf-card__sensorial">Tequila, albaricoque, apio y mango — claridad tropical en cada sorbo.</p>
+          </div>
+        </article>
+
+        <!-- 6. AROUND THE WORLD | FOCO -->
+        <article class="cf-card" data-emotion="FOCO" aria-label="Around The World — Foco">
+          <div class="cf-card__art">
+            <div class="cf-card__art-bg"></div>
+            <div class="cf-card__art-glow"></div>
+            <div class="cf-card__art-icon">
+              <svg viewBox="0 0 80 100" aria-hidden="true">
+                <!-- Wine glass -->
+                <path d="M22 18 Q22 52 40 60 Q58 52 58 18 Z" stroke-width="1.5"/>
+                <line x1="40" y1="60" x2="40" y2="85"/>
+                <ellipse cx="40" cy="85" rx="16" ry="3"/>
+                <!-- Globe lines suggestion -->
+                <ellipse cx="40" cy="38" rx="18" ry="8" stroke-width="0.8"/>
+                <path d="M40 20 Q46 30 40 56 Q34 30 40 20" stroke-width="0.8"/>
+              </svg>
+            </div>
+            <img class="cf-card__photo" src="" alt="Around The World cocktail" loading="lazy" />
+          </div>
+          <div class="cf-card__body">
+            <span class="cf-card__emotion">FOCO</span>
+            <h3 class="cf-card__name">AROUND THE WORLD</h3>
+            <p class="cf-card__sensorial">Gin, lychee y ras el hanout — un viaje de sabores que concentra la mente.</p>
+          </div>
+        </article>
+
+        <!-- 7. BRUMA DEL PACÍFICO | SORPRESA -->
+        <article class="cf-card" data-emotion="SORPRESA" aria-label="Bruma del Pacífico — Sorpresa">
+          <div class="cf-card__art">
+            <div class="cf-card__art-bg"></div>
+            <div class="cf-card__art-glow"></div>
+            <div class="cf-card__art-icon">
+              <svg viewBox="0 0 80 100" aria-hidden="true">
+                <!-- Nick & nora / coupe -->
+                <path d="M18 22 Q40 68 62 22" stroke-width="1.5"/>
+                <line x1="40" y1="66" x2="40" y2="86"/>
+                <ellipse cx="40" cy="86" rx="15" ry="3"/>
+                <!-- Smoke / mist wisps -->
+                <path d="M20 24 Q15 16 20 10 Q25 4 20 0" stroke-width="1" opacity="0.7"/>
+                <path d="M40 20 Q40 12 42 6" stroke-width="1.2" opacity="0.8"/>
+                <path d="M60 24 Q65 16 60 10 Q55 4 60 0" stroke-width="1" opacity="0.7"/>
+                <!-- Butterfly pea color hint -->
+                <path d="M36 40 Q40 34 44 40 Q40 46 36 40" stroke-width="1.2"/>
+              </svg>
+            </div>
+            <img class="cf-card__photo" src="" alt="Bruma del Pacífico cocktail" loading="lazy" />
+          </div>
+          <div class="cf-card__body">
+            <span class="cf-card__emotion">SORPRESA</span>
+            <h3 class="cf-card__name">BRUMA DEL PACÍFICO</h3>
+            <p class="cf-card__sensorial">Pisco, sandía, pepino y butterfly pea — etéreo, lo conocido y lo inesperado.</p>
+          </div>
+        </article>
+
+        <!-- 8. MISTERY COCKTAIL | SORPRESA -->
+        <article class="cf-card" data-emotion="SORPRESA" aria-label="Mistery Cocktail — Sorpresa">
+          <div class="cf-card__art">
+            <div class="cf-card__art-bg"></div>
+            <div class="cf-card__art-glow"></div>
+            <div class="cf-card__art-icon">
+              <svg viewBox="0 0 80 100" aria-hidden="true">
+                <!-- Mystery glass — asymmetric / unusual shape -->
+                <path d="M30 16 L20 80 L60 80 L50 16 Z" stroke-width="1.5"/>
+                <!-- Question mark -->
+                <path d="M34 40 Q34 32 40 30 Q46 28 46 36 Q46 42 40 44 L40 50" stroke-width="1.8"/>
+                <circle cx="40" cy="56" r="2" fill="currentColor" stroke="none"/>
+                <!-- Lid -->
+                <path d="M28 16 L52 16" stroke-width="1.5"/>
+                <path d="M32 14 L48 14 L46 10 L34 10 Z" stroke-width="1.2"/>
+              </svg>
+            </div>
+            <img class="cf-card__photo" src="" alt="Mistery Cocktail" loading="lazy" />
+          </div>
+          <div class="cf-card__body">
+            <span class="cf-card__emotion">SORPRESA</span>
+            <h3 class="cf-card__name">MISTERY COCKTAIL</h3>
+            <p class="cf-card__sensorial">Ingredientes misteriosos. Confía en la experiencia. ¿Te atreves?</p>
+          </div>
+        </article>
+
+      </div><!-- /.coverflow__track -->
+    </div><!-- /.coverflow -->
+
+    <!-- Coverflow navigation -->
+    <div class="coverflow__nav" role="group" aria-label="Navegación del carrusel">
+      <button class="cf-btn cf-btn--prev" id="cfPrev" aria-label="Cóctel anterior">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </button>
+
+      <div class="cf-dots" id="cfDots" role="tablist" aria-label="Indicadores de posición">
+        <span class="cf-dot" role="tab" data-index="0" aria-selected="true" aria-label="Cóctel 1"></span>
+        <span class="cf-dot" role="tab" data-index="1" aria-selected="false" aria-label="Cóctel 2"></span>
+        <span class="cf-dot" role="tab" data-index="2" aria-selected="false" aria-label="Cóctel 3"></span>
+        <span class="cf-dot" role="tab" data-index="3" aria-selected="false" aria-label="Cóctel 4"></span>
+        <span class="cf-dot" role="tab" data-index="4" aria-selected="false" aria-label="Cóctel 5"></span>
+        <span class="cf-dot" role="tab" data-index="5" aria-selected="false" aria-label="Cóctel 6"></span>
+        <span class="cf-dot" role="tab" data-index="6" aria-selected="false" aria-label="Cóctel 7"></span>
+        <span class="cf-dot" role="tab" data-index="7" aria-selected="false" aria-label="Cóctel 8"></span>
+      </div>
+
+      <button class="cf-btn cf-btn--next" id="cfNext" aria-label="Siguiente cóctel">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </button>
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SECONDARY CTA — RESERVE TABLE
+  ═══════════════════════════════════════════════════════════ -->
+  <section class="cta-section" aria-label="Reserva tu mesa">
+    <div class="container">
+      <div class="reveal">
+        <p class="cta-section__label">Reservas</p>
+        <h2 class="cta-section__title">¿LISTO PARA SENTIR?</h2>
+        <p class="cta-section__sub">Cada mesa es una experiencia diseñada para ti</p>
+
+        <a
+          href="https://wa.me/34605414776?text=Hola%2C%20quiero%20reservar%20una%20mesa%20en%20Synapse%20Neurobar"
+          class="btn btn--primary btn--large"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Reservar mesa por WhatsApp"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          RESERVE SU MESA
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER / CONTACTO
+  ═══════════════════════════════════════════════════════════ -->
+  <footer id="contacto" class="footer" aria-label="Contacto y ubicación">
+
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Brand -->
+        <div class="footer__brand">
+          <span class="footer__logo">SYNAPSE</span>
+          <p class="footer__tagline">
+            Donde la neurociencia encuentra la mixología.<br>
+            Cocktail Bar · Barcelona
+          </p>
+          <a
+            href="https://wa.me/34605414776?text=Hola%2C%20quiero%20reservar%20una%20mesa%20en%20Synapse%20Neurobar"
+            class="footer__whatsapp-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Contactar por WhatsApp"
+          >
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+            Reservar por WhatsApp
+          </a>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer__contact">
+          <p class="footer__col-title">Contacto</p>
+          <ul class="footer__links">
+            <li>
+              <a
+                href="https://wa.me/34605414776"
+                class="footer__link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="WhatsApp +34 605 41 47 76"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                </svg>
+                +34 605 41 47 76
+              </a>
+            </li>
+            <li>
+              <a
+                href="mailto:info@synapseneurobar.com"
+                class="footer__link"
+                aria-label="Email info@synapseneurobar.com"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2" y="4" width="20" height="16" rx="2"/>
+                  <polyline points="2,4 12,14 22,4"/>
+                </svg>
+                info@synapseneurobar.com
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://instagram.com/synapse.neurobar"
+                class="footer__link"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram @synapse.neurobar"
+              >
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <rect x="2" y="2" width="20" height="20" rx="5"/>
+                  <circle cx="12" cy="12" r="5"/>
+                  <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
+                </svg>
+                @synapse.neurobar
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Address -->
+        <div class="footer__address">
+          <p class="footer__col-title">Ubicación</p>
+          <address style="font-style:normal;">
+            <p>Carrer Torrent de l'Olla 113</p>
+            <p>08012 Barcelona</p>
+            <p>España</p>
+          </address>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Google Maps embed -->
+    <div class="footer__map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.3948!2d2.1622!3d41.4035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f3b2b2b2b2%3A0x0!2sCarrer+Torrent+de+l%27Olla+113%2C+Barcelona!5e0!3m2!1ses!2ses!4v1234567890"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Synapse Neurobar — Carrer Torrent de l'Olla 113, Barcelona"
+        aria-label="Mapa de ubicación de Synapse Neurobar"
+      ></iframe>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© 2025 Synapse Neurobar. Todos los derechos reservados.</p>
+      <p>El alcohol en exceso perjudica la salud. Bebe con moderación.</p>
+    </div>
+
+  </footer>
+
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
